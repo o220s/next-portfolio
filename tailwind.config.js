@@ -1,5 +1,3 @@
-const { draftMode } = require("next/headers");
-
 module.exports = {
   mode: "jit",
   content: [
@@ -10,7 +8,7 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  draftMode: "class",
+  darkMode: "class",
   theme: {
     extend: {},
   },
