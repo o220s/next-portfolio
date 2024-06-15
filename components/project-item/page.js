@@ -3,10 +3,10 @@ import Image from "next/image";
 export default function ProjectItem({ data }) {
   console.log(data);
   const title = data.properties.Name.title[0]?.plain_text || "제목 없음";
-  // const description =
-  //   data.properties.설명.rich_text[0]?.plain_text || "설명 없음";
+  const description =
+    data.properties.설명.rich_text[0]?.plain_text || "설명 없음";
 
-  //   const githubLink = data.properties.GitHub.url;
+  const githubLink = data.properties.GitHub.url;
 
   const imgSrc = data.cover.file?.url || data.cover.external.url;
   const tags = data.properties.Tags.multi_select;
@@ -54,8 +54,8 @@ export default function ProjectItem({ data }) {
       )}
       <div className="p-4 flex flex-col">
         <h1 className="text-2xl font-bold">{title}</h1>
-        {/* <h3 className="mt-4 text-xl">{description}</h3> */}
-        {/* <a href={githubLink}>GitHub Link</a> */}
+        <h3 className="mt-4 text-xl">{description}</h3>
+        <a href={githubLink}>GitHub Link</a>
         <p className="my-1 ">
           {start} ~ {end}
         </p>
