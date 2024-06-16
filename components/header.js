@@ -23,7 +23,6 @@ export default function Header() {
               Project
             </Link>
           </nav>
-          {/* 다크모드 버튼작업 */}
           <DarkModeButton />
         </div>
       </header>
