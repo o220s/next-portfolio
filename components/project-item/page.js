@@ -57,9 +57,9 @@ export default function ProjectItem({ data }) {
       </Link>
       <div className="p-4 flex flex-col">
         <h2 className="text-xl font-bold">{title}</h2>
-        <h4 className="mt-4 text-xs ">{description}</h4>
+        <h4 className="mt-4 text-sm ">{description}</h4>
         <a
-          className="text-gray-400 hover:text-gray-800 dark:hover:text-white"
+          className="text-gray-400 hover:text-gray-800 dark:hover:text-white text-xs"
           href={githubLink}
         >
           GitHub Link
