@@ -2,7 +2,6 @@ import { fetchNotionData } from "../../../components/api";
 import Footer from "@components/footer";
 import Header from "@components/header";
 import ProjectItem from "@components/project-item/page";
-import Link from "next/link";
 
 const Projects = async () => {
   let data;

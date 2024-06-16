@@ -6,10 +6,10 @@ export default function ProjectItem({ data }) {
   const title = data.properties.Name.title[0]?.plain_text || "제목 없음";
   const description =
     data.properties.설명.rich_text[0]?.plain_text || "설명 없음";
-
   const githubLink = data.properties.GitHub.url;
-
-  const imgSrc = data.cover.file?.url || data.cover.external.url;
+  const imgSrc = data.cover.file
+    ? data.cover.file.url
+    : data.cover.external.url;
   const tags = data.properties.Tags.multi_select;
   const start = data.properties.날짜.date.start;
   const end = data.properties.날짜.date.end;
