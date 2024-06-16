@@ -6,10 +6,7 @@ export default function ProjectItem({ data }) {
   const description =
     data.properties.설명.rich_text[0]?.plain_text || "설명 없음";
   const githubLink = data.properties.GitHub.url;
-  const imgSrc = data.cover.file
-    ? data.cover.file.url
-    : data.cover.external.url;
-
+  const imgSrc = data.cover.file?.url || data.cover.external.url;
   const tags = data.properties.Tags.multi_select;
   const start = data.properties.날짜.date.start;
   const end = data.properties.날짜.date.end;
@@ -47,7 +44,7 @@ export default function ProjectItem({ data }) {
             <Image
               className="rounded-t-xl"
               src={imgSrc}
-              alt={title || "Project cover image"}
+              alt={"Project cover image"}
               layout="fill"
               objectFit="cover"
               priority

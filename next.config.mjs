@@ -15,10 +15,10 @@ export default {
       {
         protocol: "https",
         hostname: "s3.us-west-2.amazonaws.com",
-        pathname: "/1af2607b-a8a1-4706-a7b5-f04b14bcabea/**",
+        pathname: "**",
       },
     ],
-    formats: ["image/avif", "image/webp"],
+    formats: ["image/avif", "image/webp", "image/png", "image/jpeg"],
   },
   env: {
     NOTION_TOKEN: process.env.NEXT_PUBLIC_NOTION_TOKEN,
