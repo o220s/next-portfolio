@@ -20,10 +20,15 @@ export default function About() {
               Junsang Park
             </h1>
             <p className="mb-8 leading-relaxed dark:text-white">
-              Copper mug try-hard pitchfork pour-over freegan heirloom neutra
-              air plant cold-pressed tacos poke beard tote bag. Heirloom echo
-              park mlkshk tote bag selvage hot chicken authentic tumeric
-              truffaut hexagon try-hard chambray.
+              🧑🏻‍💻 일을 깔끔하게 처리하는 개발자입니다. 복잡한 문제라도 체계적이고
+              구조화된 방식으로 접근하며, 목표를 빠르게 달성할 수 있습니다.
+              <br />
+              <br />
+              🙌🏻 코드 작성부터 문제 해결까지 모든 과정에서 세부사항을 세심하게
+              처리합니다. 품질 높은 소프트웨어를 개발 할 수 있습니다.
+              <br />
+              <br />
+              🔥 경험을 통해 성장하고 다양한 사람들을 만나는 것을 좋아합니다.
             </p>
             <div className="flex justify-center">
               <Link
