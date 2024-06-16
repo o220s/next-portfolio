@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProjectItem({ data }) {
   console.log(data);
@@ -40,25 +41,30 @@ export default function ProjectItem({ data }) {
 
   return (
     <div className="project-card">
-      {imgSrc && (
-        <div className="relative w-full h-0 pb-[70%]">
-          <Image
-            className="rounded-t-xl"
-            src={imgSrc}
-            alt={title || "Project cover image"}
-            layout="fill"
-            objectFit="cover"
-            priority
-          />
-        </div>
-      )}
+      <Link href="https://www.notion.so/69eb3509bcec41e99d65596f23af4495?pvs=4">
+        {imgSrc && (
+          <div className="relative w-full h-0 pb-[70%]">
+            <Image
+              className="rounded-t-xl"
+              src={imgSrc}
+              alt={title || "Project cover image"}
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
+          </div>
+        )}
+      </Link>
       <div className="p-4 flex flex-col">
         <h2 className="text-xl font-bold">{title}</h2>
-        <h4 className="mt-4 text-xl ">{description}</h4>
-        <a className="text-gray-300" href={githubLink}>
+        <h4 className="mt-4 text-xs ">{description}</h4>
+        <a
+          className="text-gray-400 hover:text-gray-800 dark:hover:text-white"
+          href={githubLink}
+        >
           GitHub Link
         </a>
-        <p className="my-1 text-xs text-gray-300 ">
+        <p className="my-1 text-xs text-gray-400 ">
           {start} ~ {end}
         </p>
         <div className="flex items-start mt-2">
