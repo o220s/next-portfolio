@@ -18,7 +18,7 @@ export default {
         pathname: "**",
       },
     ],
-    formats: ["image/avif", "image/webp", "image/png", "image/jpeg"],
+    formats: ["image/avif", "image/webp"],
   },
   env: {
     NOTION_TOKEN: process.env.NEXT_PUBLIC_NOTION_TOKEN,
