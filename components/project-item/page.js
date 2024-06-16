@@ -53,16 +53,18 @@ export default function ProjectItem({ data }) {
         </div>
       )}
       <div className="p-4 flex flex-col">
-        <h1 className="text-2xl font-bold">{title}</h1>
-        <h3 className="mt-4 text-xl">{description}</h3>
-        <a href={githubLink}>GitHub Link</a>
-        <p className="my-1 ">
+        <h2 className="text-xl font-bold">{title}</h2>
+        <h4 className="mt-4 text-xl ">{description}</h4>
+        <a className="text-gray-300" href={githubLink}>
+          GitHub Link
+        </a>
+        <p className="my-1 text-xs text-gray-300 ">
           {start} ~ {end}
         </p>
         <div className="flex items-start mt-2">
           {tags.map((aTag) => (
             <h1
-              className="px-2 py-1 mr-2 rounded-md bg-gray-200 dark:bg-gray-700 w-30"
+              className="text-xs px-2 py-1 mr-2 rounded-md bg-gray-200 dark:bg-gray-700 w-30"
               key={aTag.id}
             >
               {aTag.name}
