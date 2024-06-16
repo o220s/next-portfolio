@@ -15,7 +15,7 @@ export default {
       {
         protocol: "https",
         hostname: "s3.us-west-2.amazonaws.com",
-        pathname: "**",
+        pathname: "/1af2607b-a8a1-4706-a7b5-f04b14bcabea/**",
       },
     ],
     formats: ["image/avif", "image/webp"],
