@@ -18,6 +18,9 @@ export default function About() {
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 dark:text-white">
               Junsang Park
+              <span className="text-sm text-gray-600 dark:text-white ml-4">
+                1998.02.20
+              </span>
             </h1>
             <p className="mb-8 leading-relaxed dark:text-white">
               🧑🏻‍💻 일을 깔끔하게 처리하는 개발자입니다. 복잡한 문제라도 체계적이고
