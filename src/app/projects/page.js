@@ -19,6 +19,9 @@ const Projects = async () => {
     <>
       <Header />
       <div className="flex flex-col items-center justify-center min-h-screen px-3 mb-10">
+        <p className="mb-8 leading-relaxed dark:text-white">
+          Click image for project details.
+        </p>
         <div className="grid grid-cols-1 gap-10 p-12 m-4 md:grid-cols-2">
           {data.results.map((aProject) => (
             <ProjectItem key={aProject.id} data={aProject} />
