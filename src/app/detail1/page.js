@@ -215,10 +215,10 @@ export default function ProjectDetail() {
                   정수로 표현되버리는 문제 발생
                   <ul className="list-disc pl-6">
                     <li>
-                      DB 쿼리문에 'order by'문을 'asc'나 'desc'로 설정하면,
-                      Chart.js에서는 데이터 값이 모두 1로만 표현되는 오류가
-                      발생, 이를 해결하기 위해 쿼리문에 'order by'쿼리를
-                      제거하여 문제 해결
+                      DB 쿼리문에 &apos;order by&apos;문을 &apos;asc&apos;나
+                      &apos;desc&apos;로 설정하면, Chart.js에서는 데이터 값이
+                      모두 1로만 표현되는 오류가 발생, 이를 해결하기 위해
+                      쿼리문에 &apos;order by&apos;쿼리를 제거하여 문제 해결
                     </li>
                   </ul>
                 </li>
