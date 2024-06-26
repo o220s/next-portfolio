@@ -1,7 +1,10 @@
+"use client";
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-export default function ProjectItem({ data }) {
+export default function ProjectItem({ data, pageUrl }) {
+  const router = useRouter();
+
   const title = data.properties.Name.title[0]?.plain_text || "제목 없음";
   const description =
     data.properties.설명.rich_text[0]?.plain_text || "설명 없음";
@@ -10,6 +13,10 @@ export default function ProjectItem({ data }) {
   const tags = data.properties.Tags.multi_select;
   const start = data.properties.날짜.date.start;
   const end = data.properties.날짜.date.end;
+
+  const handleImageClick = () => {
+    router.push(pageUrl);
+  };
 
   const calculatedPeriod = (start, end) => {
     const startDateStringArray = start.split("-");
@@ -34,20 +41,22 @@ export default function ProjectItem({ data }) {
 
   return (
     <div className="project-card">
-      <Link href="https://www.notion.so/69eb3509bcec41e99d65596f23af4495?pvs=4">
-        {imgSrc && (
-          <div className="relative w-full h-0 pb-[70%]">
-            <Image
-              className="rounded-t-xl"
-              src={imgSrc}
-              alt={"Project cover image"}
-              layout="fill"
-              objectFit="cover"
-              priority
-            />
-          </div>
-        )}
-      </Link>
+      {imgSrc && (
+        <div
+          onClick={handleImageClick}
+          className="relative w-full h-0 pb-[70%] cursor-pointer"
+        >
+          <Image
+            className="rounded-t-xl"
+            src={imgSrc}
+            alt={"Project cover image"}
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
+        </div>
+      )}
+
       <div className="p-4 flex flex-col">
         <h2 className="text-xl font-bold">{title}</h2>
         <h4 className="mt-4 text-sm ">{description}</h4>
