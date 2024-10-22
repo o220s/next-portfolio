@@ -15,7 +15,7 @@ const Projects = async () => {
     return <p>데이터를 로드하지 못했습니다.</p>;
   }
 
-  const projectPages = ["/detail", "/detail1", "/detail2", "/detail3"];
+  const projectPages = ["/detail3", "/detail2", "/detail1", "/detail"];
 
   return (
     <>
