@@ -136,28 +136,10 @@ export default function ProjectDetail() {
             <strong>
               <ul className="list-disc pl-6">
                 <li>
-                  도시 순위 차트가 제대로 정렬되지 않고, 데이터 값들이 모두 1의
-                  정수로 표현되버리는 문제 발생
+                  구체 중력
                   <ul className="list-disc pl-6">
-                    <li>
-                      DB 쿼리문에 &apos;order by&apos;문을 &apos;asc&apos;나
-                      &apos;desc&apos;로 설정하면, Chart.js에서는 데이터 값이
-                      모두 1로만 표현되는 오류가 발생, 이를 해결하기 위해
-                      쿼리문에 &apos;order by&apos;쿼리를 제거하여 문제 해결
-                    </li>
+                    <li>문제해결 ~~~</li>
                   </ul>
-                </li>
-                <br />
-                <li>
-                  Chart.js 오픈소스를 직접 사용하여 데이터 시각화 기능을 구현
-                  <ul className="list-disc pl-6">
-                    <li>사용자가 데이터를 직관적으로 확인할 수 있도록 노력</li>
-                  </ul>
-                </li>
-                <br />
-                <li>
-                  SpringFramework의 MVC 패턴을 적용하여 프로젝트를 진행함으로써
-                  MVC 패턴의 구조를 완벽하게 이해
                   <ul className="list-disc pl-6">
                     <br />
                     <Image
@@ -165,11 +147,30 @@ export default function ProjectDetail() {
                       src={"/SpaceGravity.png"}
                       alt={"Project cover image"}
                       width={800}
-                      height={800}
+                      height={900}
                       priority
                     />
                   </ul>
                 </li>
+                <br />
+                <li>
+                  구체들 합치기 merge
+                  <ul className="list-disc pl-6">
+                    <li>문제해결 ~~~~</li>
+                  </ul>
+                  <ul className="list-disc pl-6">
+                    <br />
+                    <Image
+                      className="rounded-2xl"
+                      src={"/SpaceMerge.png"}
+                      alt={"Project cover image"}
+                      width={800}
+                      height={900}
+                      priority
+                    />
+                  </ul>
+                </li>
+                <br />
               </ul>
             </strong>
           </section>
