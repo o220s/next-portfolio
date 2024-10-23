@@ -164,8 +164,8 @@ export default function ProjectDetail() {
                       className="rounded-2xl"
                       src={"/SpaceGravity.png"}
                       alt={"Project cover image"}
-                      width={500}
-                      height={400}
+                      width={800}
+                      height={800}
                       priority
                     />
                   </ul>

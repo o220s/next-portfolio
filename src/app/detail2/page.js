@@ -50,8 +50,8 @@ export default function ProjectDetail() {
             <div class="grid gap-6">
               <div class="bg-orange-300 dark:bg-slate-700 p-4 rounded-2xl flex items-start">
                 <p>
-                  💡 적들이 랜덤으로 스폰되어, 플레이어가 적을 처치하면 스코어가
-                  증가
+                  💡 적들이 랜덤으로 스폰되어, 플레이어가 총으로 적을 처치하면
+                  스코어가 증가
                 </p>
               </div>
               <div class="bg-orange-300 dark:bg-slate-700 p-4 rounded-2xl flex items-start">
@@ -164,8 +164,8 @@ export default function ProjectDetail() {
                       className="rounded-2xl"
                       src={"/SvsMove.png"}
                       alt={"Project cover image"}
-                      width={500}
-                      height={400}
+                      width={800}
+                      height={800}
                       priority
                     />
                   </ul>
