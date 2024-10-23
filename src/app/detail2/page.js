@@ -4,13 +4,7 @@ import Header from "@components/header";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const carouselData = [
-  "/Air1.png",
-  "/Air2.png",
-  "/Air3.png",
-  "/Air4.png",
-  "/Air5.png",
-];
+const carouselData = ["/Svs1.png", "/Svs2.png", "/Svs3.png"];
 
 export default function ProjectDetail() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -168,7 +162,7 @@ export default function ProjectDetail() {
                     <br />
                     <Image
                       className="rounded-2xl"
-                      src={"/MVC.png"}
+                      src={"/SvsMove.png"}
                       alt={"Project cover image"}
                       width={500}
                       height={400}
