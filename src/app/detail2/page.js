@@ -56,7 +56,7 @@ export default function ProjectDetail() {
               </div>
               <div class="bg-orange-300 dark:bg-slate-700 p-4 rounded-2xl flex items-start">
                 <p>
-                  💡 구현했던 코드들을 리펙토링, 싱글톤패턴을 적용해서 메모리
+                  💡 구현했던 코드들을 리팩토링 및 싱글톤패턴을 적용해서 메모리
                   사용 감소
                 </p>
               </div>
