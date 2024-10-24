@@ -136,9 +136,25 @@ export default function ProjectDetail() {
             <strong>
               <ul className="list-disc pl-6">
                 <li>
-                  플레이어 움직임
+                  키보드 입력에 따라 플레이어 캐릭터가 움직여야 하는 기능 개발
+                  중, 대각선 움직임에 움직이는 속도가 빨라지는 현상 발생
                   <ul className="list-disc pl-6">
-                    <li>문제해결 ~~~</li>
+                    <li>
+                      모든 방향의 벡터 길이가 1 이어야 이동 속도가 같아지는데,
+                      normalized 정규화를 통해 대각선 이동이 빨라지는 현상 해결
+                    </li>
+                  </ul>
+                </li>
+                <br />
+                <li>
+                  마우스의 움직임에 따라 플레이어 캐릭터가 마우스 방향에 맞게
+                  바라보도록 회전 기능 개발
+                  <ul className="list-disc pl-6">
+                    <li>
+                      Physics.Raycast() 메서드를 이용해 마우스 방향에 따라
+                      보이지 않는 광선을 발사, Hit 지점에 LookAt() 메서드로
+                      플레이어 캐릭터의 회전 기능 구현
+                    </li>
                   </ul>
                   <ul className="list-disc pl-6">
                     <br />
@@ -154,9 +170,20 @@ export default function ProjectDetail() {
                 </li>
                 <br />
                 <li>
-                  적 스폰
+                  플레이어가 처치해야 할 적 캐릭터를 랜덤으로 생성하기 위한 기능
+                  개발
                   <ul className="list-disc pl-6">
-                    <li>문제해결 ~~~~</li>
+                    <li>
+                      여러 가지의 적 캐릭터를 배열에 담고, Random 메서드를 통해
+                      배열의 0번째부터 배열의 길이만큼 반복하면서 적 캐릭터 생성
+                      기능 구현
+                    </li>
+                  </ul>
+                  <ul className="list-disc pl-6">
+                    <li>
+                      Coroutine() 메서드를 통해 스폰 쿨 타임을 지정해 게임의
+                      난이도를 조절
+                    </li>
                   </ul>
                   <ul className="list-disc pl-6">
                     <br />
