@@ -56,7 +56,7 @@ export default function ProjectDetail() {
               </div>
               <div class="bg-orange-300 dark:bg-slate-700 p-4 rounded-2xl flex items-start">
                 <p>
-                  💡 같은 모양의 구체가 충돌하면 레벨업된 다른 구체가 생성,
+                  💡 같은 모양의 구체가 충돌하면 레벨 업된 다른 구체가 생성,
                   중력장 밖으로 구체가 튀어나갈 시 게임종료
                 </p>
               </div>
@@ -136,9 +136,21 @@ export default function ProjectDetail() {
             <strong>
               <ul className="list-disc pl-6">
                 <li>
-                  구체 중력
+                  무중력상태이지만 구체가 타겟에 가까워질 시, 물리작용을 이용해
+                  타겟의 위치에서 중력을 발생시켜 구체를 타겟 안으로
+                  끌어들여야하는 상황
                   <ul className="list-disc pl-6">
-                    <li>문제해결 ~~~</li>
+                    <li>
+                      Distance() 메서드를 이용해 현재구체와 타겟의 거리를
+                      실시간으로 값을 얻어냄
+                    </li>
+                  </ul>
+                  <ul className="list-disc pl-6">
+                    <li>
+                      범위를 지정해서 해당 범위내에 구체가 들어올 시, AddForce()
+                      메서드를 통해 타겟안으로 물리작용 발생 (타겟안에 구체가
+                      모이는 현상)
+                    </li>
                   </ul>
                   <ul className="list-disc pl-6">
                     <br />
@@ -154,9 +166,26 @@ export default function ProjectDetail() {
                 </li>
                 <br />
                 <li>
-                  구체들 합치기 merge
+                  같은 레벨의 구체가 충돌이 발생하면 충돌한 구체는 없어지고 다음
+                  레벨의 구체를 생성해야 하는 상황
                   <ul className="list-disc pl-6">
-                    <li>문제해결 ~~~~</li>
+                    <li>
+                      OnCollisionEnter() 메서드를 이용해, 같은 레벨의 두 객체가
+                      충돌이 감지되면 Merge() 메서드가 호출되게끔 구현
+                    </li>
+                  </ul>
+                </li>
+                <br />
+                <li>
+                  2개의 구체가 충돌 시 다음 레벨의 구체 1개만 생성되어야 하는데,
+                  서로 같은 객체이기 때문에 2개의 새로운 구체가 생성되는 트러블
+                  발생
+                  <ul className="list-disc pl-6">
+                    <li>
+                      GetInstanceID() 메서드를 이용해 객체 하나의 고유한 int
+                      값을 리턴 받아, 같은 객체의 2개 중 1개의 객체만 merge 될
+                      수 있도록 조건문으로 해결
+                    </li>
                   </ul>
                   <ul className="list-disc pl-6">
                     <br />
